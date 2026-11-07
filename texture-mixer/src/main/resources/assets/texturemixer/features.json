@@ -1,0 +1,1491 @@
+{
+ "features": [
+  {
+   "id": "hit_color",
+   "group": "PVP",
+   "tab": "settings",
+   "icon": "minecraft:redstone",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Hit Color",
+    "de": "Treffer-Farbe"
+   },
+   "desc": {
+    "en": "Spawns a burst of colored particles on the entity you hit. Choose any RGB color and the size of the particles.",
+    "de": "Erzeugt beim Treffer einer Entität einen Schwall farbiger Partikel. Wähle eine beliebige RGB-Farbe und die Partikelgröße."
+   },
+   "controls": [
+    {
+     "key": "r",
+     "type": "slider",
+     "name": {
+      "en": "Red",
+      "de": "Rot"
+     },
+     "desc": {
+      "en": "Red part of the hit color.",
+      "de": "Rotanteil von der Trefferfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 255
+    },
+    {
+     "key": "g",
+     "type": "slider",
+     "name": {
+      "en": "Green",
+      "de": "Grün"
+     },
+     "desc": {
+      "en": "Green part of the hit color.",
+      "de": "Grünanteil von der Trefferfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 40
+    },
+    {
+     "key": "b",
+     "type": "slider",
+     "name": {
+      "en": "Blue",
+      "de": "Blau"
+     },
+     "desc": {
+      "en": "Blue part of the hit color.",
+      "de": "Blauanteil von der Trefferfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 40
+    },
+    {
+     "key": "size",
+     "type": "slider",
+     "name": {
+      "en": "Size",
+      "de": "Größe"
+     },
+     "desc": {
+      "en": "Particle size.",
+      "de": "Partikelgröße."
+     },
+     "min": 0.5,
+     "max": 3,
+     "step": 0.1,
+     "def": 1.2
+    }
+   ]
+  },
+  {
+   "id": "crystal_glow",
+   "group": "PVP",
+   "tab": "settings",
+   "icon": "minecraft:end_crystal",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Crystal Glow",
+    "de": "Crystal-Glow"
+   },
+   "desc": {
+    "en": "Lets End Crystals glow. Color and intensity adjustable. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Lässt End Crystals leuchten. Farbe und Intensität einstellbar. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "damage_color",
+   "group": "PVP",
+   "tab": "settings",
+   "icon": "minecraft:red_dye",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Damage Color",
+    "de": "Schadensfarbe"
+   },
+   "desc": {
+    "en": "Changes the color of damage and hit indicators. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Ändert die Farbe von Schadens- und Trefferanzeigen. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "hit_particles",
+   "group": "PVP",
+   "tab": "settings",
+   "icon": "minecraft:firework_star",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Hit Particles",
+    "de": "Treffer-Partikel"
+   },
+   "desc": {
+    "en": "Shows vanilla particles when you hit something. Pick the particle style and how many are spawned.",
+    "de": "Zeigt beim Treffen Standard-Partikel an. Wähle den Partikelstil und die Anzahl."
+   },
+   "controls": [
+    {
+     "key": "style",
+     "type": "cycle",
+     "name": {
+      "en": "Style",
+      "de": "Stil"
+     },
+     "desc": {
+      "en": "Particle type.",
+      "de": "Partikelart."
+     },
+     "options": [
+      "Crit",
+      "Sparks",
+      "Flame",
+      "Hearts",
+      "Smoke"
+     ],
+     "options_de": [
+      "Crit",
+      "Funken",
+      "Flamme",
+      "Herzen",
+      "Rauch"
+     ],
+     "def": 0
+    },
+    {
+     "key": "amount",
+     "type": "slider",
+     "name": {
+      "en": "Amount",
+      "de": "Anzahl"
+     },
+     "desc": {
+      "en": "Particles per hit.",
+      "de": "Partikel pro Treffer."
+     },
+     "min": 1,
+     "max": 30,
+     "step": 1,
+     "def": 8
+    }
+   ]
+  },
+  {
+   "id": "custom_hit_effects",
+   "group": "PVP",
+   "tab": "settings",
+   "icon": "minecraft:lightning_rod",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Custom Hit Effects",
+    "de": "Eigene Treffer-Effekte"
+   },
+   "desc": {
+    "en": "Plays a special effect on every hit: a local lightning flash with thunder, a totem burst or a soul swirl. Only visible to you.",
+    "de": "Spielt bei jedem Treffer einen Spezialeffekt: lokalen Blitz mit Donner, Totem-Burst oder Seelenwirbel. Nur für dich sichtbar."
+   },
+   "controls": [
+    {
+     "key": "effect",
+     "type": "cycle",
+     "name": {
+      "en": "Effect",
+      "de": "Effekt"
+     },
+     "desc": {
+      "en": "Which effect is played.",
+      "de": "Welcher Effekt abgespielt wird."
+     },
+     "options": [
+      "Lightning",
+      "Totem",
+      "Soul"
+     ],
+     "options_de": [
+      "Blitz",
+      "Totem",
+      "Seelen"
+     ],
+     "def": 0
+    },
+    {
+     "key": "volume",
+     "type": "slider",
+     "name": {
+      "en": "Volume",
+      "de": "Lautstärke"
+     },
+     "desc": {
+      "en": "Volume of the effect sound.",
+      "de": "Lautstärke des Effekt-Sounds."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 5,
+     "unit": "%",
+     "def": 40
+    }
+   ]
+  },
+  {
+   "id": "swing_animation",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:iron_sword",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Swing Animation",
+    "de": "Schwing-Animation"
+   },
+   "desc": {
+    "en": "Changes the animation when swinging items. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Verändert die Animation beim Schlagen mit Items. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "item_size",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:lime_dye",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Item Size",
+    "de": "Item-Größe"
+   },
+   "desc": {
+    "en": "Scales the item in your hand (0-200%). (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Verändert die Größe des Items in der Hand (0-200 %). (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "ground_items",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:hopper",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Ground Items",
+    "de": "Boden-Items"
+   },
+   "desc": {
+    "en": "Changes size, rotation and look of items lying on the ground. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Verändert Größe, Rotation und Darstellung von Items am Boden. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "item_position",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:armor_stand",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Item Position",
+    "de": "Item-Position"
+   },
+   "desc": {
+    "en": "Moves the item in your hand (X/Y/Z). (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Verschiebt das Item in der Hand (X/Y/Z). (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "enchant_glint",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:enchanted_book",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "glint",
+   "name": {
+    "en": "Enchant Glint",
+    "de": "Verzauberungs-Glanz"
+   },
+   "desc": {
+    "en": "The enchantment glint texture comes from the Texture Mixer: pick a pack whose glint you like (or Default).",
+    "de": "Die Textur des Verzauberungs-Glanzes kommt aus dem Texture Mixer: Wähle ein Pack, dessen Glanz dir gefällt (oder Standard)."
+   },
+   "controls": []
+  },
+  {
+   "id": "item_rotation",
+   "group": "HAND",
+   "tab": "settings",
+   "icon": "minecraft:compass",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Item Rotation",
+    "de": "Item-Rotation"
+   },
+   "desc": {
+    "en": "Rotates the item in your hand (X/Y/Z). (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Dreht das Item in der Hand (X/Y/Z). (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "zoom",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:spyglass",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Zoom",
+    "de": "Zoom"
+   },
+   "desc": {
+    "en": "Zoom with a freely bindable key. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Zoom mit frei wählbarer Taste. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "crosshair",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:target",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Crosshair",
+    "de": "Fadenkreuz"
+   },
+   "desc": {
+    "en": "Custom crosshair (size, color, thickness, shape). (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Eigenes Fadenkreuz (Größe, Farbe, Dicke, Form). (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "fullbright",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:glowstone",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Fullbright",
+    "de": "Fullbright"
+   },
+   "desc": {
+    "en": "Makes the whole world bright by raising the game's brightness (gamma) above the normal maximum. Turning it off restores your old brightness.",
+    "de": "Macht die ganze Welt hell, indem die Spielhelligkeit (Gamma) über das normale Maximum angehoben wird. Beim Ausschalten wird deine alte Helligkeit wiederhergestellt."
+   },
+   "controls": [
+    {
+     "key": "level",
+     "type": "slider",
+     "name": {
+      "en": "Brightness",
+      "de": "Helligkeit"
+     },
+     "desc": {
+      "en": "How bright (1 = vanilla maximum).",
+      "de": "Wie hell (1 = Vanilla-Maximum)."
+     },
+     "min": 1,
+     "max": 15,
+     "step": 0.5,
+     "def": 10
+    }
+   ]
+  },
+  {
+   "id": "weather_time",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:clock",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Weather & Time",
+    "de": "Wetter & Zeit"
+   },
+   "desc": {
+    "en": "Local weather/time override (client-side only). (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Lokale Wetter-/Zeit-Anpassung (nur clientseitig). (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "particles",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:blaze_powder",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Particles",
+    "de": "Partikel"
+   },
+   "desc": {
+    "en": "Sets how many particles the game renders (uses the game's own particle setting).",
+    "de": "Legt fest, wie viele Partikel das Spiel darstellt (nutzt die Partikel-Option des Spiels)."
+   },
+   "controls": [
+    {
+     "key": "mode",
+     "type": "cycle",
+     "name": {
+      "en": "Mode",
+      "de": "Modus"
+     },
+     "desc": {
+      "en": "All / Reduced / Minimal.",
+      "de": "Alle / Reduziert / Minimal."
+     },
+     "options": [
+      "All",
+      "Reduced",
+      "Minimal"
+     ],
+     "options_de": [
+      "Alle",
+      "Reduziert",
+      "Minimal"
+     ],
+     "def": 0
+    }
+   ]
+  },
+  {
+   "id": "fire_overlay",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:campfire",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Fire Overlay",
+    "de": "Feuer-Overlay"
+   },
+   "desc": {
+    "en": "Size and transparency of the fire overlay. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Größe und Transparenz des Feuer-Overlays. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "potion_effects",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:potion",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Potion Effects",
+    "de": "Trank-Effekte"
+   },
+   "desc": {
+    "en": "Position and size of active potion effects. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Position und Größe der aktiven Trankeffekte. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "hud_customization",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:item_frame",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "HUD Customization",
+    "de": "HUD-Anpassung"
+   },
+   "desc": {
+    "en": "Move and scale HUD elements. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "HUD-Elemente verschieben und skalieren. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "fps_display",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:repeater",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "FPS Display",
+    "de": "FPS-Anzeige"
+   },
+   "desc": {
+    "en": "Shows your current FPS on screen. Position, size and color adjustable.",
+    "de": "Zeigt deine aktuellen FPS auf dem Bildschirm. Position, Größe und Farbe einstellbar."
+   },
+   "controls": [
+    {
+     "key": "x",
+     "type": "slider",
+     "name": {
+      "en": "Position X",
+      "de": "Position X"
+     },
+     "desc": {
+      "en": "Horizontal position (% of screen width).",
+      "de": "Horizontale Position (% der Bildschirmbreite)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "y",
+     "type": "slider",
+     "name": {
+      "en": "Position Y",
+      "de": "Position Y"
+     },
+     "desc": {
+      "en": "Vertical position (% of screen height).",
+      "de": "Vertikale Position (% der Bildschirmhöhe)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "scale",
+     "type": "slider",
+     "name": {
+      "en": "Size",
+      "de": "Größe"
+     },
+     "desc": {
+      "en": "Scale of the display.",
+      "de": "Skalierung der Anzeige."
+     },
+     "min": 50,
+     "max": 250,
+     "step": 5,
+     "unit": "%",
+     "def": 100
+    },
+    {
+     "key": "color",
+     "type": "cycle",
+     "name": {
+      "en": "Color",
+      "de": "Farbe"
+     },
+     "desc": {
+      "en": "Text color.",
+      "de": "Textfarbe."
+     },
+     "options": [
+      "White",
+      "Green",
+      "Red",
+      "Yellow",
+      "Cyan",
+      "Purple",
+      "Orange"
+     ],
+     "options_de": [
+      "Weiß",
+      "Grün",
+      "Rot",
+      "Gelb",
+      "Cyan",
+      "Lila",
+      "Orange"
+     ],
+     "def": 0
+    }
+   ]
+  },
+  {
+   "id": "ping_display",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:comparator",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Ping Display",
+    "de": "Ping-Anzeige"
+   },
+   "desc": {
+    "en": "Shows your current server ping (multiplayer only). Position, size and color adjustable.",
+    "de": "Zeigt deinen aktuellen Server-Ping (nur Multiplayer). Position, Größe und Farbe einstellbar."
+   },
+   "controls": [
+    {
+     "key": "x",
+     "type": "slider",
+     "name": {
+      "en": "Position X",
+      "de": "Position X"
+     },
+     "desc": {
+      "en": "Horizontal position (% of screen width).",
+      "de": "Horizontale Position (% der Bildschirmbreite)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "y",
+     "type": "slider",
+     "name": {
+      "en": "Position Y",
+      "de": "Position Y"
+     },
+     "desc": {
+      "en": "Vertical position (% of screen height).",
+      "de": "Vertikale Position (% der Bildschirmhöhe)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "scale",
+     "type": "slider",
+     "name": {
+      "en": "Size",
+      "de": "Größe"
+     },
+     "desc": {
+      "en": "Scale of the display.",
+      "de": "Skalierung der Anzeige."
+     },
+     "min": 50,
+     "max": 250,
+     "step": 5,
+     "unit": "%",
+     "def": 100
+    },
+    {
+     "key": "color",
+     "type": "cycle",
+     "name": {
+      "en": "Color",
+      "de": "Farbe"
+     },
+     "desc": {
+      "en": "Text color.",
+      "de": "Textfarbe."
+     },
+     "options": [
+      "White",
+      "Green",
+      "Red",
+      "Yellow",
+      "Cyan",
+      "Purple",
+      "Orange"
+     ],
+     "options_de": [
+      "Weiß",
+      "Grün",
+      "Rot",
+      "Gelb",
+      "Cyan",
+      "Lila",
+      "Orange"
+     ],
+     "def": 0
+    }
+   ]
+  },
+  {
+   "id": "keystrokes",
+   "group": "SCREEN",
+   "tab": "settings",
+   "icon": "minecraft:oak_button",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Keystrokes",
+    "de": "Keystrokes"
+   },
+   "desc": {
+    "en": "Shows pressed keys (W A S D, Space, left/right mouse button). Size, color and position adjustable.",
+    "de": "Zeigt gedrückte Tasten (W A S D, Leertaste, linke/rechte Maustaste). Größe, Farbe und Position einstellbar."
+   },
+   "controls": [
+    {
+     "key": "x",
+     "type": "slider",
+     "name": {
+      "en": "Position X",
+      "de": "Position X"
+     },
+     "desc": {
+      "en": "Horizontal position (% of screen width).",
+      "de": "Horizontale Position (% der Bildschirmbreite)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "y",
+     "type": "slider",
+     "name": {
+      "en": "Position Y",
+      "de": "Position Y"
+     },
+     "desc": {
+      "en": "Vertical position (% of screen height).",
+      "de": "Vertikale Position (% der Bildschirmhöhe)."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "def": 1
+    },
+    {
+     "key": "scale",
+     "type": "slider",
+     "name": {
+      "en": "Size",
+      "de": "Größe"
+     },
+     "desc": {
+      "en": "Scale of the display.",
+      "de": "Skalierung der Anzeige."
+     },
+     "min": 50,
+     "max": 250,
+     "step": 5,
+     "unit": "%",
+     "def": 100
+    },
+    {
+     "key": "color",
+     "type": "cycle",
+     "name": {
+      "en": "Color",
+      "de": "Farbe"
+     },
+     "desc": {
+      "en": "Text color.",
+      "de": "Textfarbe."
+     },
+     "options": [
+      "White",
+      "Green",
+      "Red",
+      "Yellow",
+      "Cyan",
+      "Purple",
+      "Orange"
+     ],
+     "options_de": [
+      "Weiß",
+      "Grün",
+      "Rot",
+      "Gelb",
+      "Cyan",
+      "Lila",
+      "Orange"
+     ],
+     "def": 0
+    }
+   ]
+  },
+  {
+   "id": "texture_quality",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:glass",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Texture Quality",
+    "de": "Textur-Qualität"
+   },
+   "desc": {
+    "en": "Changes texture rendering quality where technically supported. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Verändert die Darstellungsqualität der Texturen, soweit technisch unterstützt. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "crystals_texture",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:end_crystal",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "crystals",
+   "name": {
+    "en": "Crystal Texture",
+    "de": "Crystal-Textur"
+   },
+   "desc": {
+    "en": "Opens the Texture Mixer for the crystal category. Each category keeps its own selection.",
+    "de": "Öffnet den Texture Mixer für die Kategorie Crystal. Jede Kategorie behält ihre eigene Auswahl."
+   },
+   "controls": []
+  },
+  {
+   "id": "ender_pearls_texture",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:ender_pearl",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "ender_pearls",
+   "name": {
+    "en": "Pearl Texture",
+    "de": "Perlen-Textur"
+   },
+   "desc": {
+    "en": "Opens the Texture Mixer for the ender pearl category. Each category keeps its own selection.",
+    "de": "Öffnet den Texture Mixer für die Kategorie Enderperlen. Jede Kategorie behält ihre eigene Auswahl."
+   },
+   "controls": []
+  },
+  {
+   "id": "totems_texture",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:totem_of_undying",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "totems",
+   "name": {
+    "en": "Totem Texture",
+    "de": "Totem-Textur"
+   },
+   "desc": {
+    "en": "Opens the Texture Mixer for the totem category. Each category keeps its own selection.",
+    "de": "Öffnet den Texture Mixer für die Kategorie Totem. Jede Kategorie behält ihre eigene Auswahl."
+   },
+   "controls": []
+  },
+  {
+   "id": "swords_texture",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:diamond_sword",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "swords",
+   "name": {
+    "en": "Sword Texture",
+    "de": "Schwert-Textur"
+   },
+   "desc": {
+    "en": "Opens the Texture Mixer for the sword category. Each category keeps its own selection.",
+    "de": "Öffnet den Texture Mixer für die Kategorie Schwert. Jede Kategorie behält ihre eigene Auswahl."
+   },
+   "controls": []
+  },
+  {
+   "id": "armor_texture",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:diamond_chestplate",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": "armor",
+   "name": {
+    "en": "Armor Texture",
+    "de": "Rüstungs-Textur"
+   },
+   "desc": {
+    "en": "Opens the Texture Mixer for the armor category. Each category keeps its own selection.",
+    "de": "Öffnet den Texture Mixer für die Kategorie Rüstungs. Jede Kategorie behält ihre eigene Auswahl."
+   },
+   "controls": []
+  },
+  {
+   "id": "custom_texture_effects",
+   "group": "TEXTURE",
+   "tab": "settings",
+   "icon": "minecraft:nether_star",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Custom Texture Effects",
+    "de": "Textur-Effekte"
+   },
+   "desc": {
+    "en": "Additional visual effects for selected textures. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Zusätzliche visuelle Effekte für ausgewählte Texturen. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "gui_scale",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:spyglass",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "GUI Scale",
+    "de": "GUI-Größe"
+   },
+   "desc": {
+    "en": "Scales the Texture Mixer menus (70-150%).",
+    "de": "Skaliert die Texture-Mixer-Menüs (70-150 %)."
+   },
+   "controls": [
+    {
+     "key": "scale",
+     "type": "slider",
+     "name": {
+      "en": "Scale",
+      "de": "Größe"
+     },
+     "desc": {
+      "en": "Menu scale.",
+      "de": "Menügröße."
+     },
+     "min": 70,
+     "max": 150,
+     "step": 5,
+     "unit": "%",
+     "def": 100
+    }
+   ]
+  },
+  {
+   "id": "menu_animation",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:piston",
+   "available": true,
+   "toggle": true,
+   "default": true,
+   "link": null,
+   "name": {
+    "en": "Menu Animation",
+    "de": "Menü-Animation"
+   },
+   "desc": {
+    "en": "Fade-in when a menu opens and smooth scrolling/hover animations.",
+    "de": "Einblenden beim Öffnen sowie weiches Scrollen und Hover-Animationen."
+   },
+   "controls": []
+  },
+  {
+   "id": "menu_transparency",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:white_stained_glass",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Menu Transparency",
+    "de": "Menü-Transparenz"
+   },
+   "desc": {
+    "en": "How see-through the menu background is (0% = fully opaque).",
+    "de": "Wie durchsichtig der Menühintergrund ist (0 % = komplett deckend)."
+   },
+   "controls": [
+    {
+     "key": "value",
+     "type": "slider",
+     "name": {
+      "en": "Transparency",
+      "de": "Transparenz"
+     },
+     "desc": {
+      "en": "Background transparency.",
+      "de": "Hintergrund-Transparenz."
+     },
+     "min": 0,
+     "max": 90,
+     "step": 5,
+     "unit": "%",
+     "def": 15
+    }
+   ]
+  },
+  {
+   "id": "background_blur",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:ice",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Background Blur",
+    "de": "Hintergrund-Unschärfe"
+   },
+   "desc": {
+    "en": "Blur behind the menu. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Unschärfe hinter dem Menü. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "theme",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:painting",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Theme",
+    "de": "Design"
+   },
+   "desc": {
+    "en": "Choose the color theme of the menus.",
+    "de": "Wähle das Farbdesign der Menüs."
+   },
+   "controls": [
+    {
+     "key": "name",
+     "type": "cycle",
+     "name": {
+      "en": "Theme",
+      "de": "Design"
+     },
+     "desc": {
+      "en": "Dark, Black, Purple, Blue, Red.",
+      "de": "Dark, Black, Purple, Blue, Red."
+     },
+     "options": [
+      "Dark",
+      "Black",
+      "Purple",
+      "Blue",
+      "Red"
+     ],
+     "options_de": [
+      "Dunkel",
+      "Schwarz",
+      "Lila",
+      "Blau",
+      "Rot"
+     ],
+     "def": 0
+    }
+   ]
+  },
+  {
+   "id": "accent_color",
+   "group": "GUI",
+   "tab": "settings",
+   "icon": "minecraft:magenta_dye",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Accent Color",
+    "de": "Akzentfarbe"
+   },
+   "desc": {
+    "en": "Use your own accent color for borders, buttons and selected items instead of the theme's.",
+    "de": "Eigene Akzentfarbe für Rahmen, Buttons und ausgewählte Elemente statt der des Designs."
+   },
+   "controls": [
+    {
+     "key": "r",
+     "type": "slider",
+     "name": {
+      "en": "Red",
+      "de": "Rot"
+     },
+     "desc": {
+      "en": "Red part of the accent color.",
+      "de": "Rotanteil von der Akzentfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 142
+    },
+    {
+     "key": "g",
+     "type": "slider",
+     "name": {
+      "en": "Green",
+      "de": "Grün"
+     },
+     "desc": {
+      "en": "Green part of the accent color.",
+      "de": "Grünanteil von der Akzentfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 124
+    },
+    {
+     "key": "b",
+     "type": "slider",
+     "name": {
+      "en": "Blue",
+      "de": "Blau"
+     },
+     "desc": {
+      "en": "Blue part of the accent color.",
+      "de": "Blauanteil von der Akzentfarbe."
+     },
+     "min": 0,
+     "max": 255,
+     "step": 1,
+     "def": 255
+    }
+   ]
+  },
+  {
+   "id": "master_volume",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:note_block",
+   "available": true,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Master Volume",
+    "de": "Gesamtlautstärke"
+   },
+   "desc": {
+    "en": "Overall volume of all Texture Mixer sounds.",
+    "de": "Gesamtlautstärke aller Texture-Mixer-Sounds."
+   },
+   "controls": [
+    {
+     "key": "value",
+     "type": "slider",
+     "name": {
+      "en": "Volume",
+      "de": "Lautstärke"
+     },
+     "desc": {
+      "en": "Master volume.",
+      "de": "Gesamtlautstärke."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 5,
+     "unit": "%",
+     "def": 100
+    }
+   ]
+  },
+  {
+   "id": "gui_sounds",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:jukebox",
+   "available": true,
+   "toggle": true,
+   "default": true,
+   "link": null,
+   "name": {
+    "en": "GUI Sounds",
+    "de": "GUI-Sounds"
+   },
+   "desc": {
+    "en": "Master switch for menu sounds (click and hover).",
+    "de": "Hauptschalter für Menü-Sounds (Klick und Hover)."
+   },
+   "controls": []
+  },
+  {
+   "id": "click_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:stone_button",
+   "available": true,
+   "toggle": true,
+   "default": true,
+   "link": null,
+   "name": {
+    "en": "Button Click Sound",
+    "de": "Klick-Sound"
+   },
+   "desc": {
+    "en": "Plays a sound when you click a button or entry.",
+    "de": "Spielt beim Klick auf Buttons und Einträge einen Sound."
+   },
+   "controls": []
+  },
+  {
+   "id": "hover_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:light_weighted_pressure_plate",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Hover Sound",
+    "de": "Hover-Sound"
+   },
+   "desc": {
+    "en": "Plays a soft tick when you move over menu entries.",
+    "de": "Spielt einen leisen Tick, wenn du über Menüeinträge fährst."
+   },
+   "controls": []
+  },
+  {
+   "id": "item_sounds",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:bell",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Item Sounds",
+    "de": "Item-Sounds"
+   },
+   "desc": {
+    "en": "Individual item sounds. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Individuelle Item-Sounds. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "crystal_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:end_crystal",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Crystal Sound",
+    "de": "Crystal-Sound"
+   },
+   "desc": {
+    "en": "Custom sounds for crystal actions. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Eigene Sounds für Crystal-Aktionen. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "pearl_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:ender_pearl",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Pearl Sound",
+    "de": "Perlen-Sound"
+   },
+   "desc": {
+    "en": "Custom sounds for ender pearls. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Eigene Sounds für Enderperlen. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "totem_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:totem_of_undying",
+   "available": false,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Totem Sound",
+    "de": "Totem-Sound"
+   },
+   "desc": {
+    "en": "Custom totem sounds. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Eigene Totem-Sounds. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  },
+  {
+   "id": "hit_sound",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:iron_sword",
+   "available": true,
+   "toggle": true,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Hit Sound",
+    "de": "Treffer-Sound"
+   },
+   "desc": {
+    "en": "Plays a sound every time you hit an entity. Choose the sound, volume and pitch.",
+    "de": "Spielt bei jedem Treffer einen Sound. Wähle Sound, Lautstärke und Tonhöhe."
+   },
+   "controls": [
+    {
+     "key": "sound",
+     "type": "cycle",
+     "name": {
+      "en": "Sound",
+      "de": "Sound"
+     },
+     "desc": {
+      "en": "Which sound is played.",
+      "de": "Welcher Sound gespielt wird."
+     },
+     "options": [
+      "Ding",
+      "Bell",
+      "Pling",
+      "Crit",
+      "Anvil"
+     ],
+     "options_de": [
+      "Ding",
+      "Glocke",
+      "Pling",
+      "Crit",
+      "Amboss"
+     ],
+     "def": 0
+    },
+    {
+     "key": "volume",
+     "type": "slider",
+     "name": {
+      "en": "Volume",
+      "de": "Lautstärke"
+     },
+     "desc": {
+      "en": "Volume of the hit sound.",
+      "de": "Lautstärke des Treffer-Sounds."
+     },
+     "min": 0,
+     "max": 100,
+     "step": 5,
+     "unit": "%",
+     "def": 60
+    },
+    {
+     "key": "pitch",
+     "type": "slider",
+     "name": {
+      "en": "Pitch",
+      "de": "Tonhöhe"
+     },
+     "desc": {
+      "en": "Pitch of the hit sound.",
+      "de": "Tonhöhe des Treffer-Sounds."
+     },
+     "min": 0.5,
+     "max": 2,
+     "step": 0.1,
+     "def": 1.2
+    }
+   ]
+  },
+  {
+   "id": "custom_sound_packs",
+   "group": "SOUNDS",
+   "tab": "sounds",
+   "icon": "minecraft:music_disc_cat",
+   "available": false,
+   "toggle": false,
+   "default": false,
+   "link": null,
+   "name": {
+    "en": "Custom Sound Packs",
+    "de": "Eigene Sound-Packs"
+   },
+   "desc": {
+    "en": "Import and select your own sound packs. (Not implemented in this version yet - the switch is disabled instead of faking it.)",
+    "de": "Eigene Sound-Packs importieren und auswählen. (In dieser Version noch nicht umgesetzt - der Schalter ist deaktiviert, statt ihn vorzutäuschen.)"
+   },
+   "controls": []
+  }
+ ]
+}

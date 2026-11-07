@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "texturemixer",
+  "version": "${version}",
+  "name": "Texture Mixer",
+  "description": "Kombiniere einzelne Texturen (Crystals, Pearls, Totems, Schwerter ...) aus beliebigen installierten Resource Packs zu deinem eigenen Pack.",
+  "authors": ["Thorben"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["com.texturemixer.TextureMixerMod"] },
+  "mixins": ["texturemixer.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
